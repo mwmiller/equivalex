@@ -1,5 +1,5 @@
 defmodule EquivalexTest do
-  use PowerAssert
+  use ExUnit.Case
   import Equivalex
   doctest Equivalex
 
