@@ -3,15 +3,15 @@ defmodule Equivalex.Mixfile do
 
   def project do
     [app: :equivalex,
-     version: "0.1.3",
-     elixir: "~> 1.3",
+     version: "0.1.4",
+     elixir: "~> 1.4",
      name: "Equivalex",
      source_url: "https://github.com/mwmiller/equivalex",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     description: description,
-     package: package,
-     deps: deps]
+     description: description(),
+     package: package(),
+     deps: deps()]
   end
 
   def application do
