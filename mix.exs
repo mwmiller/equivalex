@@ -3,7 +3,7 @@ defmodule Equivalex.Mixfile do
 
   def project do
     [app: :equivalex,
-     version: "1.0.0",
+     version: "1.0.1",
      elixir: "~> 1.4",
      name: "Equivalex",
      source_url: "https://github.com/mwmiller/equivalex",
@@ -22,6 +22,7 @@ defmodule Equivalex.Mixfile do
     [
       {:earmark, "~> 1.0", only: :dev},
       {:ex_doc, "~> 0.14", only: :dev},
+      {:credo, "~> 0.7", only: [:dev, :test]},
     ]
   end
 
