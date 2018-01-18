@@ -2,16 +2,18 @@ defmodule Equivalex.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :equivalex,
-     version: "1.0.1",
-     elixir: "~> 1.4",
-     name: "Equivalex",
-     source_url: "https://github.com/mwmiller/equivalex",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     description: description(),
-     package: package(),
-     deps: deps()]
+    [
+      app: :equivalex,
+      version: "1.0.1",
+      elixir: "~> 1.4",
+      name: "Equivalex",
+      source_url: "https://github.com/mwmiller/equivalex",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
+      deps: deps()
+    ]
   end
 
   def application do
@@ -22,7 +24,7 @@ defmodule Equivalex.Mixfile do
     [
       {:earmark, "~> 1.0", only: :dev},
       {:ex_doc, "~> 0.14", only: :dev},
-      {:credo, "~> 0.7", only: [:dev, :test]},
+      {:credo, "~> 0.7", only: [:dev, :test]}
     ]
   end
 
@@ -34,13 +36,10 @@ defmodule Equivalex.Mixfile do
 
   defp package do
     [
-     files: ["lib", "mix.exs", "README*", "LICENSE*", ],
-     maintainers: ["Matt Miller"],
-     licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/mwmiller/equivalex",
-             }
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      maintainers: ["Matt Miller"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/mwmiller/equivalex"}
     ]
   end
-
 end
-
