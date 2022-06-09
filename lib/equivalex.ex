@@ -1,5 +1,5 @@
 defmodule Equivalex do
-  use Bitwise
+  import Bitwise
 
   @moduledoc """
   polymorphic constant time comparisons

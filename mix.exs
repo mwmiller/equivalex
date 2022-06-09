@@ -4,7 +4,7 @@ defmodule Equivalex.Mixfile do
   def project do
     [
       app: :equivalex,
-      version: "1.0.2",
+      version: "1.0.3",
       elixir: "~> 1.7",
       name: "Equivalex",
       source_url: "https://github.com/mwmiller/equivalex",
