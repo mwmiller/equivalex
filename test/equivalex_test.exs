@@ -24,8 +24,8 @@ defmodule EquivalexTest do
   end
 
   test "charlists" do
-    a = 'hello'
-    b = 'hullo'
+    a = ~c"hello"
+    b = ~c"hullo"
 
     assert equal?(a, a)
     assert equal?(b, b)
@@ -54,8 +54,8 @@ defmodule EquivalexTest do
   end
 
   test "deeper structures" do
-    a = [{3, "dog"}, "silent", {['abc', 'def'], 3.14}, :error]
-    b = [{3, "dog"}, "silent", {['abc', 'def'], 'tau'}, :ok]
+    a = [{3, "dog"}, "silent", {[~c"abc", ~c"def"], 3.14}, :error]
+    b = [{3, "dog"}, "silent", {[~c"abc", ~c"def"], ~c"tau"}, :ok]
     c = {:ok, %{"numbers" => [1, 2, 3]}}
 
     assert equal?(a, a)

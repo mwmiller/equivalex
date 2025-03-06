@@ -22,7 +22,7 @@ defmodule Equivalex.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, "~> 0.23", only: :dev},
+      {:ex_doc, "~> 0.23", only: :dev}
     ]
   end
 
